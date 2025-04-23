@@ -1,0 +1,35 @@
+{
+    "name": "charmci-syntax",
+    "displayName": "Charm++ CI Syntax Highlighting",
+    "description": "Syntax highlighting for Charm++ .ci files.",
+    "version": "0.0.1",
+    "publisher": "Yanni Zhuang",
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "charmci",
+                "aliases": [
+                    "Charm++ CI",
+                    "charmci"
+                ],
+                "extensions": [
+                    ".ci"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "charmci",
+                "scopeName": "source.charmci",
+                "path": "./syntaxes/charmci.tmLanguage.json"
+            }
+        ]
+    }
+}

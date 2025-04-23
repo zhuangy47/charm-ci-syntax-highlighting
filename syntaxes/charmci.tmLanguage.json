@@ -1,0 +1,37 @@
+{
+    "scopeName": "source.charmci",
+    "patterns": [
+        {
+            "name": "keyword.control.charmci",
+            "match": "\\b(module|mainmodule|chare|mainchare|group|nodegroup|namespace|array|message|conditional|extern|initcall|initnode|initproc|readonly|PUPable|pupable|template|class|include|virtual|packed|varsize|entry|using|nocopy|nocopypost|nocopydevice|migratable|python)\\b"
+        },
+        {
+            "name": "storage.modifier.entrymethod.charmci",
+            "match": "\\b(stacksize|threaded|createhere|createhome|sync|iget|exclusive|immediate|expedited|inline|local|aggregate|nokeep|notrace|accel|readwrite|writeonly|accelblock|memcritical|reductiontarget)\\b"
+        },
+        {
+            "name": "storage.type.primitive.charmci",
+            "match": "\\b(int|short|long|char|float|double|unsigned|void|const)\\b"
+        },
+        {
+            "name": "keyword.control.sdag.charmci",
+            "match": "\\b(atomic|serial|when|while|for|forall|if|else|overlap)\\b"
+        },
+        {
+            "name": "entity.name.function.charmci",
+            "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\s*(?=\\()"
+        },
+        {
+            "name": "comment.line.double-slash.charmci",
+            "match": "//.*$"
+        },
+        {
+            "name": "punctuation.bracket.charmci",
+            "match": "[{}()]"
+        },
+        {
+            "name": "punctuation.terminator.charmci",
+            "match": ";"
+        }
+    ]
+}
