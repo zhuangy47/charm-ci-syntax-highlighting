@@ -18,8 +18,49 @@
             "match": "\\b(atomic|serial|when|while|for|forall|if|else|overlap)\\b"
         },
         {
+            "begin": "\\bentry\\b\\s+(?:\\[\\w+\\]\\s+)?(.*?);",
+            "end": "(?=;)",
+            "name": "meta.function.prototype.charmci",
+            "contentName": "source.cpp.embedded.charmci",
+            "patterns": [
+                {
+                    "include": "source.cpp"
+                }
+            ]
+        },
+        {
             "name": "entity.name.function.charmci",
             "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\s*(?=\\()"
+        },
+        {
+            "name": "entity.name.namespace.charmci",
+            "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*(?=::)"
+        },
+        {
+            "name": "punctuation.separator.namespace.charmci",
+            "match": "::"
+        },
+        {
+            "begin": "\"",
+            "end": "\"",
+            "name": "string.quoted.double.charmci",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.charmci",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        {
+            "begin": "'",
+            "end": "'",
+            "name": "string.quoted.single.charmci",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.charmci",
+                    "match": "\\\\."
+                }
+            ]
         },
         {
             "name": "comment.line.double-slash.charmci",
@@ -32,6 +73,79 @@
         {
             "name": "punctuation.terminator.charmci",
             "match": ";"
+        },
+        {
+            "begin": "\\bmainchare\\b\\s+[a-zA-Z_][a-zA-Z0-9_]*\\s*\\{",
+            "end": "\\}",
+            "name": "meta.mainchare.block.charmci",
+            "patterns": [
+                {
+                    "include": "$self"
+                }
+            ]
+        },
+        {
+            "begin": "\\bmainmodule\\b\\s+[a-zA-Z_][a-zA-Z0-9_]*\\s*\\{",
+            "end": "\\}",
+            "name": "meta.mainmodule.block.charmci",
+            "patterns": [
+                {
+                    "include": "$self"
+                }
+            ]
+        },
+        {
+            "begin": "\\barray\\s*\\[[^\\]]*\\]\\s+[a-zA-Z_][a-zA-Z0-9_]*\\s*\\{",
+            "end": "\\}",
+            "name": "meta.array.block.charmci",
+            "patterns": [
+                {
+                    "include": "$self"
+                }
+            ]
+        },
+        {
+            "begin": "\\b(atomic|serial|when)\\s*\\{",
+            "end": "\\}",
+            "name": "meta.sdag.cpp.block.charmci",
+            "contentName": "source.cpp.embedded.charmci",
+            "patterns": [
+                {
+                    "include": "source.cpp"
+                }
+            ]
+        },
+        {
+            "begin": "\\b(overlap)\\s*\\{",
+            "end": "\\}",
+            "name": "meta.sdag.block.charmci",
+            "patterns": [
+                {
+                    "include": "$self"
+                }
+            ]
+        },
+        {
+            "begin": "\\b(if|while|for|forall)\\s*\\([^)]*\\)\\s*\\{",
+            "end": "\\}",
+            "name": "meta.sdag.cpp.block.charmci",
+            "contentName": "source.cpp.embedded.charmci",
+            "patterns": [
+                {
+                    "include": "source.cpp"
+                }
+            ]
+        },
+        {
+            "begin": "entry\\s+(?:\\[\\w+\\]\\s+)?[\\w\\*:\\s<>]+\\s*\\{",
+            "end": "\\}",
+            "name": "meta.entry.cpp.block.charmci",
+            "contentName": "source.cpp.embedded.charmci",
+            "patterns": [
+                {
+                    "include": "source.cpp"
+                }
+            ]
         }
     ]
 }

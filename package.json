@@ -1,14 +1,15 @@
 {
     "name": "charmci-syntax",
+    "repository": "https://github.com/zhuangy47/ci_file_vscode",
     "displayName": "Charm++ CI Syntax Highlighting",
     "description": "Syntax highlighting for Charm++ .ci files.",
-    "version": "0.0.1",
-    "publisher": "Yanni Zhuang",
+    "version": "0.0.2",
+    "publisher": "YanniZhuang",
     "engines": {
         "vscode": "^1.50.0"
     },
     "categories": [
-        "Languages"
+        "Programming Languages"
     ],
     "contributes": {
         "languages": [
